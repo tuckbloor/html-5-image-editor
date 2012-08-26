@@ -1,0 +1,120 @@
+.menu li div a {
+	*display:inline;
+}
+.menu_dark_theme .menu .dropdown_1column, 
+.menu_dark_theme .menu .dropdown_2columns, 
+.menu_dark_theme .menu .dropdown_3columns, 
+.menu_dark_theme .menu .dropdown_4columns,
+.menu_dark_theme .menu .dropdown_5columns,
+.menu_dark_theme .menu .dropdown_fullwidth {
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF161616, endColorstr=#FF0A0A0A)";	
+}
+.menu_light_theme .menu .dropdown_1column, 
+.menu_light_theme .menu .dropdown_2columns, 
+.menu_light_theme .menu .dropdown_3columns, 
+.menu_light_theme .menu .dropdown_4columns,
+.menu_light_theme .menu .dropdown_5columns,
+.menu_light_theme .menu .dropdown_fullwidth {
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFEEEEEE, endColorstr=#FFBBBBBB)";	
+}
+
+.menu_black {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF555555, endColorstr=#FF2A2A2A);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF555555, endColorstr=#FF2A2A2A)";	
+}
+.menu_blue {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF0272a7, endColorstr=#FF013953);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF0272a7, endColorstr=#FF013953)";	
+}
+.menu_brown {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF736033, endColorstr=#FF382f19);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF736033, endColorstr=#FF382f19)";	
+}
+.menu_green {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF658c26, endColorstr=#FF354914);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF658c26, endColorstr=#FF354914)";	
+}
+.menu_lightblue {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF709e8e, endColorstr=#FF52786b);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF709e8e, endColorstr=#FF52786b)";	
+}
+.menu_orange {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFff6717, endColorstr=#FFc14300);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFff6717, endColorstr=#FFc14300)";	
+}
+.menu_pink {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFd50066, endColorstr=#FF80003d);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFd50066, endColorstr=#FF80003d)";	
+}
+.menu_purple {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF8c8094, endColorstr=#FF615867);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF8c8094, endColorstr=#FF615867)";	
+}
+.menu_red {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFd70b02, endColorstr=#FF830701);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFd70b02, endColorstr=#FF830701)";	
+}
+
+
+/* IE7 Specific Styling */
+
+.wrapper_menu_full .menu li:hover .dropdown_fullwidth {
+	*margin-left:-430px;
+}
+.wrapper_menu_full .menu li.right:hover .dropdown_fullwidth {
+	*margin-right:-511px;
+}
+
+/* IE6 Specific Styling */
+
+body {
+	_behavior: url("css/ie/csshover3.htc");
+}
+.menu_dark_theme ul li.fullwidth:hover {
+	_background:#161616;
+}
+.menu_dark_theme ul li .drop,
+.menu_dark_theme .menu li.noactive .drop {
+	_background:url("ie_down2.png") no-repeat right 13px;
+}
+.menu_dark_theme ul li:hover .drop {
+	_background:url("ie_down2.png") no-repeat right 12px;
+}
+.menu_dark_theme ul .levels a.parent, 
+.menu_dark_theme ul .levels a.parent:hover {
+	_background: url("ie_right2.png") right center no-repeat;
+}
+.menu_light_theme ul li.fullwidth:hover {
+	_background:#eeeeee;
+}
+.menu_light_theme ul li .drop,
+.menu_light_theme .menu li.noactive .drop {
+	_background:url("ie_down1.png") no-repeat right 13px;
+}
+.menu_light_theme ul li:hover .drop {
+	_background:url("ie_down1b.png") no-repeat right 12px;
+}
+.menu_light_theme ul .levels a.parent, 
+.menu_light_theme ul .levels a.parent:hover {
+	_background: url("ie_right1.png") right center no-repeat;
+}
+.menu_light_theme ul li.right:hover,
+.menu_dark_theme ul li.right:hover {
+	_margin-right:0px;
+}
+.menu li.nodrop:hover {
+	_padding: 0;
+}
+.menu li:hover .align_right {
+	_right:-2px;
+}
+.menu li.right:hover .dropdown_fullwidth {
+	_right:21px;
+}
+.wrapper_menu_full .menu li:hover .dropdown_fullwidth {
+	_margin-left:-490px;
+}
+.wrapper_menu_full .menu li.right:hover .dropdown_fullwidth {
+	_margin-right:-490px;
+}
+

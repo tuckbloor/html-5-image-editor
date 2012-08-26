@@ -1,0 +1,1321 @@
+/*
+Item Name : CSS3 Mega Drop Down Menu
+Author URI : http://codecanyon.net/user/Pixelworkshop/
+Item URI : http://codecanyon.net/item/css3-mega-drop-down-menu/126387
+Version : 5.0
+*/
+
+/*
+
+TABLE OF CONTENTS
+
+01 MENU BAR
+02 DROP DOWN MENU
+03 CONTENT STYLING
+04 CONTACT FORM
+05 LIGHT THEME
+06 DARK THEME
+07 COLORS
+08 MOBILE DEVICES
+
+*/
+
+
+
+/*  _______________________________________
+
+	01 MENU BAR
+    _______________________________________  */
+
+
+
+/* IMPORTANT NOTICE
+   If you're using the whole width menu, you should use at least a reset like :
+   * {margin:0; padding:0;}
+   Otherwise, some browsers may add margins and won't place the menu properly.
+   It generally helps to include a CSS reset like : 
+   http://meyerweb.com/eric/tools/css/reset/
+   Keep in mind that a reset must be placed first, before any other CSS markup.
+*/
+.wrapper_menu {
+	width: 980px;
+	margin:0 auto;
+	display:block;
+	position: relative;
+	z-index:9999;
+}
+	.wrapper_menu .menu {
+		list-style:none;
+		width:940px;
+		margin:0 auto;
+		height:43px;
+		padding:0 20px 0 20px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+.wrapper_menu_full {
+    margin:0;
+    position: relative;
+    z-index:9999;
+}
+	.wrapper_menu_full .menu {
+		width:100%;
+		padding:0;
+		height:43px;
+	}
+	.wrapper_menu_full .menu_whole_width {
+		list-style:none;
+		width:940px;
+		margin:0 auto;
+		height:43px;
+		padding:0;
+	}
+.menu li {
+	float:left;
+	text-align:center;
+	position:relative;
+	margin-right:20px;
+	margin-top:6px;
+	border:none;
+}
+.menu .fullwidth {
+	position: static !important;
+}
+.menu li:hover {
+	border-bottom:none;
+	margin-right:19px;
+    -webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+.menu li.nodrop:hover {
+	padding: 4px 10px 4px 9px;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.menu li.nodrop:hover a {
+	padding: 0;
+}
+.menu li a {
+	color: #EEEEEE;
+	outline:0;
+	padding: 5px 10px 3px 10px;
+	text-decoration:none;
+	display:block;
+	text-shadow: 1px 1px 1px #000;
+}
+.menu li:hover a {
+	text-shadow: none;
+	position:relative;
+	z-index:11;
+	padding: 4px 9px 4px 9px;
+}
+.menu li:hover div a {
+	display:inline;
+}
+.menu li .drop,
+.menu li:hover .drop {
+	padding-right:27px;
+}
+
+/* Right aligned menu item */
+
+.menu li.right {
+	float:right;
+	right:0;
+	margin-right:0;
+}
+.menu li.right:hover {
+	margin-right:-1px;
+}
+
+
+
+/*  _______________________________________
+
+	02 DROP DOWN MENU
+    _______________________________________  */
+
+
+
+/* Left & right aligned common styles */
+
+.menu .dropdown_1column, 
+.menu .dropdown_2columns, 
+.menu .dropdown_3columns, 
+.menu .dropdown_4columns,
+.menu .dropdown_5columns,
+.menu .dropdown_fullwidth {
+	margin:4px auto;
+	left:-999em;
+	position:absolute;
+	padding:10px;
+	text-align:left;
+	-webkit-border-radius: 0 5px 5px 5px;
+	-moz-border-radius: 0 5px 5px 5px;
+	border-radius: 0 5px 5px 5px;
+}
+
+/* Drop Downs Sizes */
+
+.menu .dropdown_1column {width: 145px;}
+.menu .dropdown_2columns {width: 300px;}
+.menu .dropdown_3columns {width: 455px;}
+.menu .dropdown_4columns {width: 610px;}
+.menu .dropdown_5columns {width: 765px;}
+.menu .dropdown_fullwidth {
+	width: 920px;
+    -webkit-border-radius:5px;
+	-moz-border-radius:5px;
+    border-radius:5px;
+}
+.menu li .first_fullwidth {
+    -webkit-border-radius: 0 5px 5px 5px;
+	-moz-border-radius: 0 5px 5px 5px;
+    border-radius: 0 5px 5px 5px;
+}
+
+/* Showing Drop Down on Mouse Hover - Left aligned */
+
+.menu li:hover .dropdown_1column, 
+.menu li:hover .dropdown_2columns, 
+.menu li:hover .dropdown_3columns,
+.menu li:hover .dropdown_4columns,
+.menu li:hover .dropdown_5columns {
+	left:-1px;
+	top:25px;
+}
+.menu li:hover .dropdown_fullwidth {
+	left:21px;
+	top:33px;
+	display: block;
+}
+.wrapper_menu_full .menu li:hover .dropdown_fullwidth {
+	left:50%;
+	margin-left:-470px;
+	top:32px;
+	display: block;
+}
+
+/* Showing Drop Down on Mouse Hover - Right aligned */
+
+.menu li .align_right {
+    -webkit-border-radius: 5px 0 5px 5px;
+	-moz-border-radius: 5px 0 5px 5px;
+    border-radius: 5px 0 5px 5px;
+}
+.menu li:hover .align_right {
+	left:auto;
+	right:-1px;
+	top:25px;
+}
+.menu li.right:hover .dropdown_fullwidth {
+	right:18px;
+	top:33px;
+}
+.wrapper_menu_full .menu li.right:hover .dropdown_fullwidth {
+	left:auto;
+	right:50%;
+	margin-right:-471px;
+	top:32px;
+}
+
+/* Columns Sizes */
+
+.menu .col_1,
+.menu .col_2,
+.menu .col_3,
+.menu .col_4,
+.menu .col_5,
+.menu .col_6 {
+	float: left;
+	margin-left: 10px;
+}
+.menu .col_1 {width:145px;}
+.menu .col_2 {width:300px;}
+.menu .col_3 {width:455px;}
+.menu .col_4 {width:610px;}
+.menu .col_5 {width:765px;}
+.menu .col_6 {width:920px;}
+
+/* IMPORTANT */
+
+/* Use the firstcolumn class for the items that stick to the left edge of the dropdown */
+.menu .firstcolumn {
+	margin-left: 0; /* Clearing margin & left */
+	clear: left;
+}
+
+
+
+/*  _______________________________________
+
+	03 CONTENT STYLING
+    _______________________________________  */
+
+
+
+.menu p,
+.menu ul,
+.menu li,
+.menu h2,
+.menu h3 {
+	font-size:14px; 
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:21px;
+	text-align:left;
+	color: #000000;
+}
+.menu p {
+	font-size:12px;
+	line-height:18px;
+	margin:0;
+	margin-bottom:10px;
+	text-shadow:1px 1px #000000;
+}
+.menu .strong {
+	font-weight:bold;
+}
+.menu .italic {
+	font-style:italic;
+}
+.menu h2, 
+.menu h3 {
+	text-shadow:1px 1px #000000;
+	margin-top:7px;
+}
+.menu h2 {
+	font-weight:400;
+	font-size:21px;
+	margin-bottom:18px;
+	padding-bottom:11px;
+}
+.menu h3 {
+	font-weight:600;
+	font-size:14px;
+	margin-bottom:14px;
+	padding-bottom:7px;
+}
+.menu li:hover div a {
+	text-decoration:none;
+	text-shadow:none;
+	border:none;
+	padding:0;
+}
+.menu .pusher { /* Use this pucher if you want to give more vertical spacing between your rows of content */
+	margin-top:18px;
+}
+
+/* Icon paragraphs */
+
+.menu .help,
+.menu .favorite,
+.menu .mail,
+.menu .print {
+	padding-left:36px;
+	margin-bottom:18px;
+}
+.menu .help {background:url("../img/help.png") no-repeat 0 2px;}
+.menu .favorite {background:url("../img/favorite.png") no-repeat 0 2px;}
+.menu .mail {background:url("../img/mail.png") no-repeat 0 2px;}
+.menu .print {background:url("../img/print.png") no-repeat 0 2px;}
+
+/* Images styles */
+
+.menu .imgshadow_dark,
+.menu .imgshadow_light {
+	padding:4px;
+	margin-top:5px;
+}
+.menu .img_left { /* Image sticks to the left */
+	width:auto;
+	float:left;
+	margin:2px 15px 5px 0;
+}
+.menu .img_right { /* Image sticks to the right */
+	width:auto;
+	float:right;
+	margin:2px 0 5px 15px;
+}
+
+/* Box styles */
+
+.menu li .black_box,
+.menu li .dark_grey_box {
+	color: #eeeeee;
+	text-shadow: 1px 1px 1px #000;
+	padding:4px 6px 4px 6px;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Standard lists styles */
+
+.menu li ul {
+	list-style:none;
+	padding:0;
+	margin:0 0 12px 0;
+}
+.menu li ul li {
+	font-size:12px;
+	line-height:24px;
+	position:relative;
+	text-shadow: 1px 1px 1px #000000;
+	padding:0;
+	margin:0;
+	float:left;
+	text-align:left;
+	width:145px;
+}
+.menu li ul li a {
+	padding:0;
+}
+.menu li ul li:hover {
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+/* Greybox lists styles */
+
+.menu li .greybox li {
+	margin:0 0 4px 0;
+	padding:4px 6px 4px 6px;
+	width:131px;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.menu li .greybox li:hover {
+	padding:4px 6px 4px 6px;
+	margin:0 0 4px 0;
+}
+
+/* Other lists styles */
+
+.menu li .plus li {
+	margin:0 0 4px 0;
+	padding:0 0 0 21px;
+	width:109px;
+}
+.menu li .plus li:hover {
+	padding:0 0 0 21px;
+	margin:0 0 4px 0;
+}
+
+/* Social Icons */
+
+.menu li ul.social {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.menu li ul.social li {
+	padding-top:5px;
+	margin:0 12px 12px 0;
+	float:left;
+	position:relative;
+	display:inline;
+	width:32px;
+}
+.menu li ul.social li img {
+	border:none;
+}
+.menu li ul.social li:hover {
+	padding-top:5px;
+	margin:-1px 12px 12px 0;
+}
+.menu li ul.social li span {
+	display:none;
+}
+
+/* 2-Levels Drop Down */
+
+.menu .levels, 
+.menu .levels ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.menu li:hover .levels a {
+	display:block;
+}
+.menu .levels a {
+	display: block;
+	width: 10em;
+}
+.menu .levels li {
+	float: left;
+	width:150px;
+}
+.menu .levels li ul {
+	position: absolute;
+	top:-23px;
+	margin:15px 0 0 4px;
+	padding:6px;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+	left: -999em;
+}
+.menu .levels li:hover ul ul, 
+.menu .levels li:hover ul ul ul {
+	left: -999em;
+}
+.menu .levels li:hover ul, 
+.menu .levels li li:hover ul, 
+.menu .levels li li li:hover ul {
+	left: 142px;
+}
+
+
+
+/*  _______________________________________
+
+	04 CONTACT FORM
+    _______________________________________  */
+
+
+
+.contact_form label, 
+.contact_form legend {
+	font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.contact_form legend {
+	margin-bottom:10px;
+}
+.contact_form {
+	display: block;
+	margin-bottom:10px;
+}
+.contact_form label {
+	display: inline-block; 
+	float: left; 
+	height: 36px; 
+	line-height: 36px; 
+	width:80px;
+	font-size:12px; 
+}
+.contact_form input, 
+.contact_form textarea, 
+.contact_form select {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	width:200px;
+	padding: 5px;
+	margin: 7px 0; 
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+    border-radius: 3px;
+}   
+.contact_form textarea {
+	resize:none;
+}   
+.contact_form .required {
+	color:#C00;
+}
+.contact_form .form_buttons {
+	margin:4px 0 0 80px;
+}
+.contact_form input.button {
+	width: 80px;
+	margin-right:10px;
+	cursor: pointer;
+	padding: 4px 7px 4px 7px;
+}
+.contact_form .special {
+	display:none;
+}
+.contact_form .error, 
+.contact_form .sent {
+	font-size:11px;
+	padding:2px 5px 2px 5px;
+	text-shadow:none;
+	-webkit-border-radius:3px; 
+	-moz-border-radius:3px; 
+	border-radius: 3px;
+}
+.contact_form .error {
+	background:#FBE5E2; 
+	border:#F2A197 solid 1px; 
+	color:#992213;
+}
+.contact_form .sent {
+	background:#E1F8CB; 
+	border:#C6D880 solid 1px; 
+	color:#37620d;
+}
+
+
+
+/*  _______________________________________
+
+	05 LIGHT THEME
+    _______________________________________  */
+
+
+
+.menu_light_theme ul li:hover,
+.menu_light_theme ul li.nodrop:hover {
+	background:#eeeeee;
+	border:1px solid #444444;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F4F4F4), to(#EEEEEE));
+	background: -webkit-linear-gradient(top, #F4F4F4, #EEEEEE);
+	background: -moz-linear-gradient(top, #F4F4F4, #EEEEEE);
+	background: -o-linear-gradient(top, #F4F4F4, #EEEEEE);
+	background: -ms-linear-gradient(top, #F4F4F4, #EEEEEE);
+	background: linear-gradient(top, #F4F4F4, #EEEEEE);
+}
+.menu_light_theme ul li:hover a {
+	color:#161616;
+	border-bottom:1px solid #EEEEEE;
+}
+.menu_light_theme ul li .drop,
+.menu_light_theme .menu li.noactive .drop {
+	background:url("../img/arrow_down1.png") no-repeat right 13px;
+}
+.menu_light_theme ul li:hover .drop {
+	background:url("../img/arrow_down1.png") no-repeat right 12px;
+}
+.menu_light_theme ul .dropdown_1column, 
+.menu_light_theme ul .dropdown_2columns, 
+.menu_light_theme ul .dropdown_3columns, 
+.menu_light_theme ul .dropdown_4columns,
+.menu_light_theme ul .dropdown_5columns,
+.menu_light_theme ul .dropdown_fullwidth,
+.menu_light_theme ul .levels li ul {
+	background:#eeeeee;
+	border:1px solid #444444;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#BBBBBB));
+	background: -webkit-linear-gradient(top, #EEEEEE, #BBBBBB);
+	background: -moz-linear-gradient(top, #EEEEEE, #BBBBBB);
+	background: -o-linear-gradient(top, #EEEEEE, #BBBBBB);
+	background: -ms-linear-gradient(top, #EEEEEE, #BBBBBB);
+	background: linear-gradient(top, #EEEEEE, #BBBBBB);
+}
+.menu_light_theme ul p,
+.menu_light_theme ul h2, 
+.menu_light_theme ul h3,
+.menu_light_theme ul li ul li {
+	text-shadow: 1px 1px 1px #FFFFFF;
+}
+.menu_light_theme ul h2, 
+.menu_light_theme ul h3 {
+	border-bottom:1px solid #888888;
+}
+.menu_light_theme ul .imgshadow_dark { /* Better style on dark background */
+	background:#FFFFFF;
+	border:1px solid #333333;
+	-moz-box-shadow:0 0 5px #000000;
+	-webkit-box-shadow:0 0 5px #000000;
+	box-shadow:0 0 5px #000000;
+}
+.menu_light_theme ul .imgshadow_light { /* Better style on light background */
+	background:#FFFFFF;
+	border:1px solid #777777;
+	-webkit-box-shadow:0 0 5px #666666;
+	-moz-box-shadow:0 0 5px #666666;
+	box-shadow:0 0 5px #666666;
+}
+.menu_light_theme ul li .black_box {
+	color:#000000;
+	text-shadow:1px 1px 1px #000000;
+	background-color:#333333;
+	-webkit-box-shadow:inset 0 0 3px #000000;
+	-moz-box-shadow:inset 0 0 3px #000000;
+	box-shadow:inset 0 0 3px #000000;
+}
+.menu_light_theme ul li .dark_grey_box {
+	color:#000000;
+	text-shadow:1px 1px 1px #000000;
+	background-color:#555555;
+	-webkit-box-shadow:inset 0 0 3px #111111;
+	-moz-box-shadow:inset 0 0 3px #111111;
+	box-shadow:inset 0 0 3px #111111;
+}
+.menu_light_theme ul li .greybox li {
+	background:#F4F4F4;
+	border:1px solid #bbbbbb;
+}
+.menu_light_theme ul li .greybox li:hover {
+	background:#ffffff;
+	border:1px solid #aaaaaa;
+}
+.menu_light_theme ul li .plus li {
+	background: url("../img/plus.png") left 6px no-repeat;
+}
+.menu_light_theme ul .levels a.parent, 
+.menu_light_theme ul .levels a.parent:hover {
+	background: url("../img/arrow_right1.png") right center no-repeat;
+}
+.menu_light_theme ul .contact_form input:focus, 
+.menu_light_theme ul .contact_form textarea:focus, 
+.menu_light_theme ul .contact_form select:focus,
+.menu_light_theme ul .contact_form input:hover, 
+.menu_light_theme ul .contact_form textarea:hover, 
+.menu_light_theme ul .contact_form select:hover {
+	box-shadow: rgba(0,0,0, 0.7) 0 0 3px;
+	-moz-box-shadow: rgba(0,0,0, 0.7) 0 0 3px;
+	-webkit-box-shadow: rgba(0,0,0, 0.7) 0 0 3px;  
+	border:1px solid #333333;
+}
+.menu_light_theme ul .contact_form input, 
+.menu_light_theme ul textarea, 
+.menu_light_theme ul select {
+	color: #000000; 
+	background-color:#222222;
+	border:1px solid #0A0A0A;
+}
+.menu_light_theme ul .contact_form input.button {
+	background-color:#1E1E1E;
+	border:1px solid #0A0A0A;
+	color:#cccccc;	
+}
+.menu_light_theme ul .contact_form input.button:hover {
+	color:#eeeeee;	
+	background-color:#222222;
+	border:1px solid #000000;
+}
+.menu_light_theme .menu li:hover div a {
+	border-bottom:none;
+}
+.menu_light_theme .menu li.noactive a {
+	color:#eeeeee;
+}
+
+
+
+/*  _______________________________________
+
+	06 DARK THEME
+    _______________________________________  */
+
+
+
+.menu_dark_theme ul li:hover,
+.menu_dark_theme ul li.nodrop:hover {
+	background:#161616;
+	border:1px solid #000000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#161616));
+	background: -webkit-linear-gradient(top, #212121, #161616);
+	background: -moz-linear-gradient(top, #212121, #161616);
+	background: -o-linear-gradient(top, #212121, #161616);
+	background: -ms-linear-gradient(top, #212121, #161616);
+	background: linear-gradient(top, #212121, #161616);
+}
+.menu_dark_theme ul li:hover a {
+	color:#000000;
+	border-bottom:1px solid #161616;
+}
+.menu_dark_theme ul li .drop,
+.menu_dark_theme .menu li.noactive .drop {
+	background:url("../img/arrow_down2.png") no-repeat right 13px;
+}
+.menu_dark_theme ul li:hover .drop {
+	background:url("../img/arrow_down2.png") no-repeat right 12px;
+}
+.menu_dark_theme ul .dropdown_1column, 
+.menu_dark_theme ul .dropdown_2columns, 
+.menu_dark_theme ul .dropdown_3columns, 
+.menu_dark_theme ul .dropdown_4columns,
+.menu_dark_theme ul .dropdown_5columns,
+.menu_dark_theme ul .dropdown_fullwidth,
+.menu_dark_theme ul .levels li ul {
+	background:#161616;
+	border:1px solid #000000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#161616), to(#0A0A0A));
+	background: -webkit-linear-gradient(top, #161616, #0A0A0A);
+	background: -moz-linear-gradient(top, #161616, #0A0A0A);
+	background: -o-linear-gradient(top, #161616, #0A0A0A);
+	background: -ms-linear-gradient(top, #161616, #0A0A0A);
+	background: linear-gradient(top, #161616, #0A0A0A);
+}
+.menu_dark_theme ul p,
+.menu_dark_theme ul ul,
+.menu_dark_theme ul li,
+.menu_dark_theme ul h2,
+.menu_dark_theme ul h3 {
+	color:#000000;
+}
+.menu_dark_theme ul h2, 
+.menu_dark_theme ul h3 {
+	border-bottom:1px solid #333333;
+}
+.menu_dark_theme ul .imgshadow_dark,
+.menu_dark_theme ul .imgshadow_light {
+	background:#FFFFFF;
+	border:1px solid #333333;
+	-webkit-box-shadow:0 0 5px #000000;
+	-moz-box-shadow:0 0 5px #000000;
+	box-shadow:0 0 5px #000000;
+}
+.menu_dark_theme ul .imgshadow_light {
+	border:1px solid #777777;
+}
+.menu_dark_theme ul li .black_box,
+.menu_dark_theme ul li .dark_grey_box {
+	background-color:#0A0A0A;
+	-webkit-box-shadow:inset 0 0 3px #000000;
+	-moz-box-shadow:inset 0 0 3px #000000;
+	box-shadow:inset 0 0 3px #000000;
+}
+.menu_dark_theme ul li .greybox li {
+	background:#0A0A0A;
+	border:1px solid #000000;
+}
+.menu_dark_theme ul li .greybox li:hover {
+	background:#141414;
+	border:1px solid #111111;
+}
+.menu_dark_theme ul li .plus li {
+	background: url("../img/plus_dark.png") left 6px no-repeat;
+}
+.menu_dark_theme ul .levels a.parent, 
+.menu_dark_theme ul .levels a.parent:hover {
+	background: url("../img/arrow_right2.png") right center no-repeat;
+}
+.menu_dark_theme ul .contact_form input:focus, 
+.menu_dark_theme ul .contact_form textarea:focus, 
+.menu_dark_theme ul .contact_form select:focus {
+	box-shadow: rgba(0,0,0, 0.7) 0 0 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.7) 0 0 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.7) 0 0 8px;  
+	border:1px solid #333333;
+}
+.menu_dark_theme ul .contact_form input:hover, 
+.menu_dark_theme ul .contact_form textarea:hover, 
+.menu_dark_theme ul .contact_form select:hover {
+	-webkit-box-shadow: rgba(0,0,0, 0.3) 0 0 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.3) 0 0 8px;
+	box-shadow: rgba(0,0,0, 0.3) 0 0 8px;
+}
+.menu_dark_theme ul .contact_form input, 
+.menu_dark_theme ul .contact_form textarea, 
+.menu_dark_theme ul .contact_form select {
+	color: #000000; 
+	background-color:#222222;
+	border:1px solid #0A0A0A;
+}
+.menu_dark_theme ul .contact_form input.button {
+	background-color:#1E1E1E;
+	border:1px solid #0A0A0A;
+	color:#cccccc;	
+}
+.menu_dark_theme ul .contact_form input.button:hover {
+	color:#eeeeee;	
+	background-color:#222222;
+	border:1px solid #000000;
+}
+.menu_dark_theme .menu li:hover div a {
+	border-bottom:none;
+}
+
+
+
+/*  _______________________________________
+
+	07 COLORS
+    _______________________________________  */
+
+
+
+/* Black */
+
+.menu_black {
+	background: #333;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#555), to(#2a2a2a));
+	background: -webkit-linear-gradient(top, #555, #2a2a2a);
+	background: -moz-linear-gradient(top, #555, #2a2a2a);
+	background: -o-linear-gradient(top, #555, #2a2a2a);
+	background: -ms-linear-gradient(top, #555, #2a2a2a);
+	background: linear-gradient(top, #555, #2a2a2a);
+}
+.wrapper_menu .menu_black {
+	border: 1px solid #444;
+	border-top: 1px solid #777;
+}
+.wrapper_menu_full .menu_black {
+	border-bottom: 1px solid #444;
+}
+.menu_dark_theme .menu_black li:hover div a {color:#CCC;}
+.menu_dark_theme .menu_black li:hover div a:hover {color:#EEE;}
+.menu_dark_theme .menu_black li ul li a:hover {color:#EEE;}
+.menu_light_theme .menu_black li:hover div a {color:#444;}
+.menu_light_theme .menu_black li:hover div a:hover {color:#777;}
+.menu_light_theme .menu_black li ul li a:hover {color:#777;}
+
+/* Blue */
+
+.menu_blue {
+	background: #014464;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#0272a7), to(#013953));
+	background: -webkit-linear-gradient(top, #0272a7, #013953);
+	background: -moz-linear-gradient(top, #0272a7, #013953);
+	background: -o-linear-gradient(top, #0272a7, #013953);
+	background: -ms-linear-gradient(top, #0272a7, #013953);
+	background: linear-gradient(top, #0272a7, #013953);
+}
+.wrapper_menu .menu_blue {
+	border: 1px solid #015b86;
+	border-top: 1px solid #029feb;
+}
+.wrapper_menu_full .menu_blue {
+	border-bottom: 1px solid #015b86;
+}
+.menu_dark_theme .menu_blue li:hover div a {color:#0294da;}
+.menu_dark_theme .menu_blue li:hover div a:hover {color:#33bcfd;}
+.menu_dark_theme .menu_blue li ul li a:hover {color:#33bcfd;}
+.menu_light_theme .menu_blue li:hover div a {color:#015b86;}
+.menu_light_theme .menu_blue li:hover div a:hover {color:#029feb;}
+.menu_light_theme .menu_blue li ul li a:hover {color:#029feb;}
+
+/* Brown */
+
+.menu_brown {
+	background: #44391e;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#736033), to(#382f19));
+	background: -webkit-linear-gradient(top, #736033, #382f19);
+	background: -moz-linear-gradient(top, #736033, #382f19);
+	background: -o-linear-gradient(top, #736033, #382f19);
+	background: -ms-linear-gradient(top, #736033, #382f19);
+	background: linear-gradient(top, #736033, #382f19);
+}
+.wrapper_menu .menu_brown {
+	border: 1px solid #5c4c29;
+	border-top: 1px solid #a28748;
+}
+.wrapper_menu_full .menu_brown {
+	border-bottom: 1px solid #5c4c29;
+}
+.menu_dark_theme .menu_brown li:hover div a {color:#8b733e;}
+.menu_dark_theme .menu_brown li:hover div a:hover {color:#bfa670;}
+.menu_dark_theme .menu_brown li ul li a:hover {color:#bfa670;}
+.menu_light_theme .menu_brown li:hover div a {color:#5c4c29;}
+.menu_light_theme .menu_brown li:hover div a:hover {color:#a28748;}
+.menu_light_theme .menu_brown li ul li a:hover {color:#a28748;}
+
+/* Green */
+
+.menu_green {
+	background: #3e5718;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#658c26), to(#354914));
+	background: -webkit-linear-gradient(top, #658c26, #354914);
+	background: -moz-linear-gradient(top, #658c26, #354914);
+	background: -o-linear-gradient(top, #658c26, #354914);
+	background: -ms-linear-gradient(top, #658c26, #354914);
+	background: linear-gradient(top, #658c26, #354914);
+}
+.wrapper_menu .menu_green {
+	border: 1px solid #52711f;
+	border-top: 1px solid #8bc135;
+}
+.wrapper_menu_full .menu_green {
+	border-bottom: 1px solid #52711f;
+}
+.menu_dark_theme .menu_green li:hover div a {color:#6f992a;}
+.menu_dark_theme .menu_green li:hover div a:hover {color:#a3d158;}
+.menu_dark_theme .menu_green li ul li a:hover {color:#a3d158;}
+.menu_light_theme .menu_green li:hover div a {color:#52711f;}
+.menu_light_theme .menu_green li:hover div a:hover {color:#8bc135;}
+.menu_light_theme .menu_green li ul li a:hover {color:#8bc135;}
+
+/* Light Blue */
+
+.menu_lightblue {
+	background: #52786b;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#709e8e), to(#52786b));
+	background: -webkit-linear-gradient(top, #709e8e, #52786b);
+	background: -moz-linear-gradient(top, #709e8e, #52786b);
+	background: -o-linear-gradient(top, #709e8e, #52786b);
+	background: -ms-linear-gradient(top, #709e8e, #52786b);
+	background: linear-gradient(top, #709e8e, #52786b);
+}
+.wrapper_menu .menu_lightblue {
+	border: 1px solid #608c7d;
+	border-top: 1px solid #99b9ae;
+}
+.wrapper_menu_full .menu_lightblue {
+	border-bottom: 1px solid #608c7d;
+}
+.menu_dark_theme .menu_lightblue li:hover div a {color:#608c7d;}
+.menu_dark_theme .menu_lightblue li:hover div a:hover {color:#99b9ae;}
+.menu_dark_theme .menu_lightblue li ul li a:hover {color:#99b9ae;}
+.menu_light_theme .menu_lightblue li:hover div a {color:#608c7d;}
+.menu_light_theme .menu_lightblue li:hover div a:hover {color:#99b9ae;}
+.menu_light_theme .menu_lightblue li ul li a:hover {color:#99b9ae;}
+
+/* Orange */
+
+.menu_orange {
+	background: #d24900;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ff6717), to(#c14300));
+	background: -webkit-linear-gradient(top, #ff6717, #c14300);
+	background: -moz-linear-gradient(top, #ff6717, #c14300);
+	background: -o-linear-gradient(top, #ff6717, #c14300);
+	background: -ms-linear-gradient(top, #ff6717, #c14300);
+	background: linear-gradient(top, #ff6717, #c14300);
+}
+.wrapper_menu .menu_orange {
+	border: 1px solid #f45500;
+	border-top: 1px solid #ff945b;
+}
+.wrapper_menu_full .menu_orange {
+	border-bottom: 1px solid #f45500;
+}
+.menu_dark_theme .menu_orange li:hover div a {color:#f45500;}
+.menu_dark_theme .menu_orange li:hover div a:hover {color:#ff945b;}
+.menu_dark_theme .menu_orange li ul li a:hover {color:#ff945b;}
+.menu_light_theme .menu_orange li:hover div a {color:#f45500;}
+.menu_light_theme .menu_orange li:hover div a:hover {color:#ff945b;}
+.menu_light_theme .menu_orange li ul li a:hover {color:#ff945b;}
+
+/* Pink */
+
+.menu_pink {
+	background: #910045;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#d50066), to(#80003d));
+	background: -webkit-linear-gradient(top, #d50066, #80003d);
+	background: -moz-linear-gradient(top, #d50066, #80003d);
+	background: -o-linear-gradient(top, #d50066, #80003d);
+	background: -ms-linear-gradient(top, #d50066, #80003d);
+	background: linear-gradient(top, #d50066, #80003d);
+}
+.wrapper_menu .menu_pink {
+	border: 1px solid #b30055;
+	border-top: 1px solid #ff1a87;
+}
+.wrapper_menu_full .menu_pink {
+	border-bottom: 1px solid #b30055;
+}
+.menu_dark_theme .menu_pink li:hover div a {color:#e6006d;}
+.menu_dark_theme .menu_pink li:hover div a:hover {color:#ff4da1;}
+.menu_dark_theme .menu_pink li ul li a:hover {color:#ff4da1;}
+.menu_light_theme .menu_pink li:hover div a {color:#b30055;}
+.menu_light_theme .menu_pink li:hover div a:hover {color:#ff1a87;}
+.menu_light_theme .menu_pink li ul li a:hover {color:#ff1a87;}
+
+/* Purple */
+
+.menu_purple {
+	background: #6a5f71;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#8c8094), to(#615867));
+	background: -webkit-linear-gradient(top, #8c8094, #615867);
+	background: -moz-linear-gradient(top, #8c8094, #615867);
+	background: -o-linear-gradient(top, #8c8094, #615867);
+	background: -ms-linear-gradient(top, #8c8094, #615867);
+	background: linear-gradient(top, #8c8094, #615867);
+}
+.wrapper_menu .menu_purple {
+	border: 1px solid #7b6f83;
+	border-top: 1px solid #ada5b3;
+}
+.wrapper_menu_full .menu_purple {
+	border-bottom: 1px solid #7b6f83;
+}
+.menu_dark_theme .menu_purple li:hover div a {color:#7b6f83;}
+.menu_dark_theme .menu_purple li:hover div a:hover {color:#ada5b3;}
+.menu_dark_theme .menu_purple li ul li a:hover {color:#ada5b3;}
+.menu_light_theme .menu_purple li:hover div a {color:#7b6f83;}
+.menu_light_theme .menu_purple li:hover div a:hover {color:#ada5b3;}
+.menu_light_theme .menu_purple li ul li a:hover {color:#ada5b3;}
+
+/* Red */
+
+.menu_red {
+	background: #830701;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#d70b02), to(#830701));
+	background: -webkit-linear-gradient(top, #d70b02, #830701);
+	background: -moz-linear-gradient(top, #d70b02, #830701);
+	background: -o-linear-gradient(top, #d70b02, #830701);
+	background: -ms-linear-gradient(top, #d70b02, #830701);
+	background: linear-gradient(top, #d70b02, #830701);
+}
+.wrapper_menu .menu_red {
+	border: 1px solid #a40802;
+	border-top: 1px solid #fd190f;
+}
+.wrapper_menu_full .menu_red {
+	border-bottom: 1px solid #a40802;
+}
+.menu_dark_theme .menu_red li:hover div a {color:#d60a03;}
+.menu_dark_theme .menu_red li:hover div a:hover {color:#fd5953;}
+.menu_dark_theme .menu_red li ul li a:hover {color:#fd5953;}
+.menu_light_theme .menu_red li:hover div a {color:#a40802;}
+.menu_light_theme .menu_red li:hover div a:hover {color:#fd190f;}
+.menu_light_theme .menu_red li ul li a:hover {color:#fd190f;}
+
+
+
+/*  _______________________________________
+
+	08 MOBILE DEVICES
+    _______________________________________  */
+
+
+
+.menu li.noactive,
+.menu li.noactive:hover {
+	background:none;
+	border:none;
+	margin-right:20px;
+}
+.menu li.noactive a {
+	padding: 5px 27px 3px 10px;
+	text-shadow: 1px 1px 1px #000;
+	border-bottom:none;
+}
+.menu li.noactive.right {
+	margin-right:0;
+}
+
+
+@media only screen and (max-width: 1024px) {
+	
+	/*	
+	html {
+		height: 100%; 
+		font-size: 100%; 
+		overflow-y: scroll; 
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	} 
+	body {
+		margin: 0; 
+		min-height: 100%; 
+		-webkit-font-smoothing:antialiased; 
+		font-smoothing:antialiased; 
+		text-rendering:optimizeLegibility;
+	}
+	*/
+
+	/* Menu Containers */
+	
+	.wrapper_menu,
+	.wrapper_menu_full {
+		width:100%;
+		margin:0;
+		float:left;
+	}
+	.wrapper_menu .menu {
+		padding:6px 0 3px 0;
+	}
+	.wrapper_menu_full .menu,
+	.wrapper_menu_full .menu .menu_whole_width {
+		padding:3px 0 1px 0;
+	}
+	.wrapper_menu .menu,
+	.wrapper_menu_full .menu,
+	.wrapper_menu_full .menu .menu_whole_width {
+		width:100%;
+		margin:0;
+		height:auto;
+		float:left;
+		border:none;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+	
+	/* Menu Items */
+	
+	.menu > li,
+	.menu .menu_whole_width > li,
+	.menu > li.right,
+	.menu .menu_whole_width > li.right {
+		height:35px;
+		position:static;
+		margin:0 15px 0 0;
+		float:left;
+		right:auto;
+	}
+	.menu > li:hover,
+	.menu .menu_whole_width > li:hover,
+	.menu > li.right:hover,
+	.menu .menu_whole_width > li.right:hover {
+		height:33px;
+		margin-right:14px;
+	}
+	.menu > li.nodrop:hover,
+	.menu .menu_whole_width > li.nodrop:hover {
+		height:20px;
+		margin-bottom:5px;
+	}
+	
+	/* Menu Drop Downs */
+	
+	.menu .dropdown_1column, 
+	.menu .dropdown_2columns, 
+	.menu .dropdown_3columns, 
+	.menu .dropdown_4columns,
+	.menu .dropdown_5columns,
+	.menu .dropdown_fullwidth,
+	.menu li .align_right  {
+		width: 96%;
+		border:none;
+		float:left;
+		padding:2%;
+		-webkit-border-radius: 0 0 5px 5px;
+		-moz-border-radius: 0 0 5px 5px;
+		border-radius: 0 0 5px 5px;
+	}
+	
+	/* Menu Drop Downs Columns */
+	
+	.menu .col_1,
+	.menu .col_2,
+	.menu .col_3,
+	.menu .col_4,
+	.menu .col_5,
+	.menu .col_6 {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+		float: left;
+		display: block;
+	}
+	.menu > .col_1,
+	.menu > .col_2,
+	.menu > .col_3,
+	.menu > .col_4,
+	.menu > .col_5,
+	.menu > .col_6 {
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.menu li:hover .dropdown_1column, 
+	.menu li:hover .dropdown_2columns, 
+	.menu li:hover .dropdown_3columns,
+	.menu li:hover .dropdown_4columns,
+	.menu li:hover .dropdown_5columns,
+	.menu li:hover .dropdown_fullwidth,
+	.menu li:hover .align_right,
+	.menu li.right:hover .dropdown_fullwidth,
+	.wrapper_menu_full .menu li.right:hover .dropdown_fullwidth {
+		left:0;
+		top:auto;
+		margin:-1px 0 0 0;
+	}
+	
+	/* Menu Typography and Elements */
+	
+	.menu h1 {
+		font-size: 1.7em; 
+		margin-bottom: 0.6em;
+	} 
+	.menu h2 {
+		font-size: 1.4em; 
+		margin-bottom: 0.6em;
+	} 
+	.menu h3 {
+		font-size: 1.1em; 
+		margin-bottom: 0.6em;
+	} 
+	.menu p, 
+	.menu ul {
+		font-size: 0.9em; 
+		line-height: 1.8em; 
+		margin-bottom: 1.5em;
+	}
+	.menu li .greybox li,
+	.menu li .greybox li:hover {
+		margin:0 15px 4px 0;
+		padding:4px 9px 4px 9px;
+		width:auto;
+	}
+	
+	/* Regular Drop Down (turned into a list) */
+	
+	.menu .levels li,
+	.menu .levels li ul	{
+		position: relative;
+		width:auto;
+		top:auto;
+		margin:0;
+		padding:0;
+		left: auto;
+		float:left;
+		border:none;
+		background:none;
+	}
+	.menu .levels li a {
+		width:auto;
+		float:left;
+		display:inline;
+		margin:0 20px 12px 0;
+	}
+	.menu .levels li:hover ul, 
+	.menu .levels li:hover ul ul, 
+	.menu .levels li:hover ul ul ul {
+		left: auto;
+	}
+	.menu_dark_theme ul .levels a.parent,
+	.menu_dark_theme ul .levels a.parent:hover,
+	.menu_dark_theme ul .levels li ul,
+	.menu_light_theme ul .levels a.parent, 
+	.menu_light_theme ul .levels a.parent:hover,
+	.menu_light_theme ul .levels li ul {
+		background: none;
+		border:none;
+	}
+	
+	/* Menu Contact Form */
+	
+	.contact_form label {
+		width:96%;
+	}
+	.contact_form input, 
+	.contact_form textarea, 
+	.contact_form select {
+		width:96%;
+	}   
+	.contact_form .form_buttons {
+		margin:4px 0 0 0;
+	}
+
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+
+	.menu > li,
+	.menu > li:hover,
+	.menu > li.right,
+	.menu > li.right:hover,
+	.menu .menu_whole_width > li,
+	.menu .menu_whole_width > li:hover,
+	.menu .menu_whole_width > li.right,
+	.menu .menu_whole_width > li.right:hover {
+		float:none;
+		width:auto;
+		padding-right:0;
+		margin-right:0;
+	}
+	.menu > li.nodrop,
+	.menu .menu_whole_width > li.nodrop {
+		height:32px;
+	}
+	.menu > li.nodrop:hover,
+	.menu .menu_whole_width > li.nodrop:hover {
+		height:22px;
+		margin-bottom:0px;
+	}
+	.menu .dropdown_1column, 
+	.menu .dropdown_2columns, 
+	.menu .dropdown_3columns, 
+	.menu .dropdown_4columns,
+	.menu .dropdown_5columns,
+	.menu .dropdown_fullwidth,
+	.menu .align_right  {
+		width: auto;
+	}
+h3 {
+ color: #000000;	
+}
