@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type='text/javascript' src='js/jquery.min.js'></script>
+<script src="js/kinetic-v3.9.3.js"></script>
+<script type="text/javascript" src="js/version1.js"></script>
+<title>Html5 image editor</title>
+<meta name="author" content="Chris Bloor" />
+<link href="css/layout.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen" />
+<!-- Menu -->
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="css/ie/ie.css" />
+<![endif]-->
+<link rel="stylesheet" href="styles/global.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/mobile.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#spinner").bind("ajaxSend", function() {
+		$(this).show();
+	}).bind("ajaxStop", function() {
+		$(this).hide();
+	}).bind("ajaxError", function() {
+		$(this).hide();
+	});
+
+     });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5918573-53']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header"> </div>
+  <!--header-->
+
+  <div id="content">
+    <p id="textcount" style="position:absolute; left: 0px; visibility:hidden;font-size:30pt;"></p>
+    <div id="instructions">
+      <h3>Instructions Will Show Below. Add Text With The Text Box On The Right, Add Extra Images By Clicking Images Below The Canvas</h3>
+    </div>
+    <p id="textcount" style="position:absolute; left: 0px; visibility:hidden;font-size:30pt;"></p>
+    <div id="container" style="float:left; margin-right:40px;margin-top:10px;"> </div>
+    <div id="editor">
+      <ul id="text" style="float: left; margin-right:10px;">
+        <div id="spinner" class="spinner" style="display:none;margin-left:80px;margin-bottom:20px;"> Image Uploading<img src="images/ajax.png" alt="loading"> </div>
+        <div id="container2" style="width:140px;"> </div>
+        <li>
+          <label>Text: </label>
+          <input type="text" id="texts" placeholder="Add Text Here"/>
+        </li>
+        <li>
+          <label>Font Family: </label>
+          <select id="fontfam">
+            <option>Calibri</option>
+            <option>Arial</option>
+            <option>Verdana</option>
+            <option>Impact</option>
+            <option>Serif</option>
+            <option>Monospace</option>
+            <option>Helvetica</option>
+            <option>Tahoma</option>
+            <option>Gadget</option>
+          </select>
+        </li>
+        <li>
+          <label>Font Colour: </label>
+          <select id="colour">
+            <option>Black</option>
+            <option>Red</option>
+            <option>Blue</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Yellow</option>
+            <option>Pink</option>
+            <option>Gray</option>
+            <option>Purple</option>
+            <option>Silver</option>
+            <option>Gold</option>
+            <option>Orange</option>
+          </select>
+        </li>
+        <li>
+          <label>Text Stroke Colour</label>
+          <select id="textstroke">
+            <option>transparent</option>
+            <option>White</option>
+            <option>Black</option>
+            <option>Red</option>
+            <option>Blue</option>
+            <option>Green</option>
+            <option>Yellow</option>
+            <option>Pink</option>
+            <option>Gray</option>
+            <option>Purple</option>
+            <option>Silver</option>
+            <option>Gold</option>
+            <option>Orange</option>
+          </select>
+        </li>
+        <li>
+          <label>&nbsp;</label>
+          <input type="submit" id="textsubmit" value="Add Text"/>
+        </li>
+      </ul>
+      <input type="submit" id="preview" value="Preview"/>
+      <input type="submit" id="save" value="Save"/>
+      <p class="clearing" /></p>
+      <ul id="img">
+        <li><a href="#"><img src="images/heart.png" id="i1" alt="heart" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/balloon.png" id="i2" alt="balloon" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/caterpillar3.png" id="i14" alt="caterpilla" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/Bears_1.png" id="i3" alt="Bear" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/Bears_2.png" id="i4" alt="Bear" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/Bears_3.png" id="i5" alt="Bear" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/Bears_4.png" id="i6" alt="Bear" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/cat1.png" id="i7" alt="cat" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/cat2.png" id="i8" alt="cat" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/cat3.png" id="i9" alt="cat" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/cat4.png" id="i10" alt="cat" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/squirrels.png" id="i11" alt="squirrels" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/caterpillar.png" id="i12" alt="caterpilla" width="106" height="118" /></a></li>
+        <li><a href="#"><img src="images/caterpillar2.png" id="i13" alt="caterpilla" width="106" height="118" /></a></li>
+      </ul>
+      <div style="float: left; margin-right:10px;"> <a href="http://www.amazon.co.uk/HTML5-Canvas-Cookbook-Eric-Rowell/dp/1849691363/ref=sr_1_5?ie=UTF8&amp;qid=1335127078&amp;sr=8-5" target="_blank"> <img src="images/cookbook.jpg" alt="canvas book" width="130" style="margin-top:10px;"/></a> </div>
+      This is a simple Demo by Chris Bloor on how you can build a html5 image editor, it uses Eric Rowell kinetic.js library, his book is available to buy online, I bought it from www.amazon.co.uk, you can click on the image of the book to take you straight to the book on Amazon UK.
+      <p> If you can&#39;t see anything on the image editors canvas you will need to use a modern browser, because many people use IE with Windows XP then I recommend Firefox and it can be downloaded here <a href="http://www.mozilla.org">Firefox Download</a> Windows XP does not support IE9+, IE8 and below do not support many html 5 tags.</p>
+      <p>The heart image is static, the teddy can be dragged and resized by clicking when the mouse curser changes to a pointer it can be clicked on all 4 corners to re-size.</p>
+      <p>Click on the images below the canvas to add them to the canvas and drag and drop into position, double click on them to remove them, you can add text by typing text into the text box, change colour and font family and click add text, again you can remove the text by double clicking on the text.</p>
+    </div>
+
+  </div>
+  <div id="footer"></div>
+  <!--footer--> 
+</div>
+<!--container--> 
+
+<script>
+    $("#texts").keyup(function () {
+      var value = $(this).val();
+      $("p#textcount").text(value);
+	  	   var fontid =  $('#fontfam').val();
+		     $("p#textcount").css("font-family", fontid);
+		   var color =  $('#colour').val();
+             $("p#textcount").css("color", color);  
+    }).keyup();
+	
+	    $("#colour").change(function () {
+      var value = $('texts').val();
+      $("p#textcount").text(value);
+	  	   var fontid =  $('#fontfam').val();
+		     $("p#textcount").css("font-family", fontid);
+		   var color =  $('#colour').val();
+             $("p#textcount").css("color", color);  
+    }).keyup();
+	
+		    $("#fontfam").change(function () {
+      var value = $('texts').val();
+      $("p#textcount").text(value);
+	  	   var fontid =  $('#fontfam').val();
+		     $("p#textcount").css("font-family", fontid);
+		   var color =  $('#colour').val();
+             $("p#textcount").css("color", color);  
+    }).keyup();
+	
+	
+</script>
+</body>
+</html>
